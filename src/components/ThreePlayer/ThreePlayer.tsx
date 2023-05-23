@@ -62,12 +62,12 @@ const Model = (props: any) => {
 function getSafePosition(
   initPositionArray: [number, number, number][]
 ): [number, number, number] {
-  const y = 0.03 * getRandomInt(45, 80)
+  const y = 0.03 * getRandomInt(30, 90)
 
   let initPosition: [number, number, number] = [
-    0.08 * getRandomInt(0, y * 6) * getBoolean(),
+    0.085 * getRandomInt(0, y * 6) * getBoolean(),
     y,
-    0.08 * getRandomInt(0, y * 6) * getBoolean(),
+    0.085 * getRandomInt(0, y * 6) * getBoolean(),
   ]
 
   if (initPositionArray.length > 2) {
@@ -107,7 +107,7 @@ const OneKeyGroup = () => {
 
   return (
     <group ref={groupRef}>
-      {new Array(40).fill(0).map((_, index) => {
+      {new Array(50).fill(0).map((_, index) => {
         const initPosition = getSafePosition(initPositionArray)
 
         initPositionArray.push(initPosition)

@@ -1,6 +1,6 @@
 import { Instance, Instances } from '@react-three/drei'
 
-export const Grid = ({ number = 23, lineWidth = 0.026, height = 0.5 }) => (
+export const Grid = ({ number = 50, lineWidth = 0.026, height = 1 }) => (
   // Renders a grid and crosses as instances
   <Instances position={[0, -1.02, 0]}>
     <planeGeometry args={[lineWidth, height]} />
